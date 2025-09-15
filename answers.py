@@ -29,8 +29,7 @@ def fcfs(processes, arrival, burst):
     print("Process | AT | BT | CT | WT | TAT")
     for i in range(n):
         print(f"{data[i][0]:7} | {data[i][1]:2} | {data[i][2]:2} | {completion[i]:2} | {waiting[i]:2} | {turnaround[i]:3}")
-    print(f"
-Average Waiting Time = {avg_wt:.2f}")
+    print(f"Average Waiting Time = {avg_wt:.2f}")
     print(f"Average Turnaround Time = {avg_tat:.2f}")
 
 
@@ -86,8 +85,7 @@ def sjf(processes, arrival, burst):
     print("Process | AT | BT | CT | WT | TAT")
     for i in range(n):
         print(f"{processes[i]:7} | {arrival[i]:2} | {burst[i]:2} | {completion[i]:2} | {waiting[i]:2} | {turnaround[i]:3}")
-    print(f"
-Average Waiting Time = {avg_wt:.2f}")
+    print(f"Average Waiting Time = {avg_wt:.2f}")
     print(f"Average Turnaround Time = {avg_tat:.2f}")
 
 
@@ -138,8 +136,7 @@ def priority_scheduling(processes, arrival, burst, priority):
     print("Process | AT | BT | PRI | CT | WT | TAT")
     for i in range(n):
         print(f"{processes[i]:7} | {arrival[i]:2} | {burst[i]:2} | {priority[i]:3} | {completion[i]:2} | {waiting[i]:2} | {turnaround[i]:3}")
-    print(f"
-Average Waiting Time = {avg_wt:.2f}")
+    print(f"Average Waiting Time = {avg_wt:.2f}")
     print(f"Average Turnaround Time = {avg_tat:.2f}")
 
 
@@ -189,8 +186,7 @@ def round_robin(processes, arrival, burst, quantum):
     print("Process | AT | BT | CT | WT | TAT")
     for i in range(n):
         print(f"{processes[i]:7} | {arrival[i]:2} | {burst[i]:2} | {completion[i]:2} | {waiting[i]:2} | {turnaround[i]:3}")
-    print(f"
-Average Waiting Time = {avg_wt:.2f}")
+    print(f"Average Waiting Time = {avg_wt:.2f}")
     print(f"Average Turnaround Time = {avg_tat:.2f}")
 
 
@@ -199,8 +195,6 @@ processes = ["P1", "P2", "P3"]
 arrival   = [0, 0, 0]   # all 0 for simplicity
 burst     = [10, 5, 8]
 round_robin(processes, arrival, burst, quantum=2)
-
-
 
 #Code for page_fifo
 
@@ -331,8 +325,7 @@ def first_fit(blocks, processes):
     return allocation
 
 def print_allocation(processes, allocation):
-    print("
-Process No.	Process Size	Block No.")
+    print("Process No.	Process Size	Block No.")
     for i, (psize, block) in enumerate(zip(processes, allocation)):
         if block != -1:
             print(f"P{i+1}		{psize}		{block+1}")
@@ -347,8 +340,7 @@ print("Initial Blocks:", blocks)
 print("Processes:", processes)
 
 allocation = first_fit (blocks, processes)
-print("
---- First Fit Allocation ---")
+print("--- First Fit Allocation ---")
 print_allocation(processes, allocation)
 
 
@@ -369,8 +361,7 @@ def best_fit (blocks, processes):
     return allocation
 
 def print_allocation (processes, allocation):
-    print("
-Process No.	Process Size	Block No.")
+    print("Process No.	Process Size	Block No.")
     for i, (psize, block) in enumerate(zip(processes, allocation)):
         if block != -1:
             print(f"P{i+1}		{psize}		{block+1}")
@@ -385,8 +376,7 @@ print("Initial Blocks:", blocks)
 print("Processes:", processes)
 
 allocation = best_fit (blocks, processes)
-print("
---- Best Fit Allocation ---")
+print("--- Best Fit Allocation ---")
 print_allocation(processes, allocation)
 
 
@@ -407,8 +397,7 @@ def worst_fit(blocks, processes):
     return allocation
 
 def print_allocation (processes, allocation):
-    print("
-Process No.	Process Size	Block No.")
+    print("Process No.	Process Size	Block No.")
     for i, (psize, block) in enumerate(zip(processes, allocation)):
         if block != -1:
             print(f"P{i+1}		{psize}		{block+1}")
@@ -423,6 +412,5 @@ print("Initial Blocks:", blocks)
 print("Processes:", processes)
 
 allocation = worst_fit (blocks, processes)
-print("
---- Worst Fit Allocation ---")
+print("--- Worst Fit Allocation ---")
 print_allocation(processes, allocation)
